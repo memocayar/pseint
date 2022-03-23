@@ -1,0 +1,38 @@
+Algoritmo jornada
+	Definir nombre, dia, festivo, turno como cadena
+	Definir horas Como Real
+	
+	Escribir "Ingrese el nombre del trabajador:"
+	Leer nombre
+	Escribir "Ingrese el día de la semana:" 
+	Leer dia
+	Escribir "¿El día ingresado fue festivo? (si/no)"
+	Leer festivo
+	Escribir "Ingrese el turno trabajado (diurno/nocturno)"
+	Leer turno
+	Escribir "Ingrese la cantidad de horas trabajadas:"
+	Leer horas
+	
+	Escribir "El jornal para " nombre " es $" calcular(festivo,turno,horas)
+	
+FinAlgoritmo
+
+Funcion jornal <- calcular(festivo,turno,horas)
+	Definir jornal, tarifa Como Real
+	
+	Si festivo = "si"
+		Si turno = "diurno"
+			tarifa = 110*90/100
+		SiNo // tarifa = nocturno
+			tarifa = 115*125/100
+		FinSi
+	SiNo // festivo = no
+		Si turno = "diurno"
+			tarifa = 90
+		SiNo
+			tarifa = 125
+		FinSi
+	FinSi
+	
+	jornal = horas * tarifa
+FinFuncion

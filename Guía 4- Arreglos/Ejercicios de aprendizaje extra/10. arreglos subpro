@@ -1,0 +1,36 @@
+// Realizar un programa que rellene de números aleatorios una matriz a través de un
+// subprograma y generar otro subprograma que muestre por pantalla la matriz final.
+
+Algoritmo sin_titulo
+	Definir m, n, matriz Como Entero
+	Escribir "Ingresar dimesiones de la matriz"
+	Leer m
+	Leer n 
+	Dimension matriz(m,n)
+	
+	rellenar(matriz,m,n)
+	mostrarr(matriz,m,n)
+FinAlgoritmo
+
+SubProceso rellenar(matriz Por Referencia, m Por Valor, n por valor)
+	Definir i, j Como Entero
+	
+	Para i = 0 hasta m-1
+		Para j = 0 hasta n-1
+			matriz(i,j) = Aleatorio(-100,100)
+		FinPara
+	FinPara
+FinSubProceso
+
+SubProceso mostrarr(matriz,m,n)
+	Definir i, j Como Entero
+	
+	Para i = 0 hasta m-1
+		Para j = 0 hasta n-1
+			Escribir sin saltar matriz(i,j) "    "
+		FinPara
+		Escribir ""
+	FinPara
+	Escribir ""
+FinSubProceso
+	

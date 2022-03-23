@@ -1,0 +1,34 @@
+Algoritmo numeroPrimo
+	
+	Definir num como real 
+	Escribir "Ingrese un número a evaluar."
+	Leer num
+	
+	Escribir Sin Saltar "El número " num 
+	
+	Si EsPrimo(num) = Verdadero Entonces
+		Escribir " es primo."
+	SiNo
+		Escribir " no es primo."
+	FinSi
+	
+FinAlgoritmo
+
+Funcion primo <- EsPrimo(num)
+	Definir primo como logico 
+	Definir i, divisores como real
+	divisores = 0 
+	
+	Para i = 1 hasta num Hacer
+		Si num % i = 0 Entonces
+			divisores = divisores + 1
+		FinSi
+	FinPara
+	
+	Si divisores = 2 Entonces
+		primo = verdadero
+	SiNo
+		primo = falso
+	FinSi
+	
+FinFuncion

@@ -1,0 +1,15 @@
+Algoritmo palabraConEspacios
+	
+	Definir palabra como cadena
+	Definir i como entero 
+	
+	Escribir "Ingrese una palabra"
+	Leer palabra
+	
+	Para i = 0 hasta Longitud(palabra)
+		
+		Escribir Sin Saltar concatenar(subcadena(palabra, i, i), ' ')
+		
+	FinPara
+	
+FinAlgoritmo

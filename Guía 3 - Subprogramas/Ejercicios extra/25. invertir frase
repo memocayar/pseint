@@ -1,0 +1,35 @@
+//. Implemente de forma recursiva una función que le dé la vuelta a una cadena de
+// caracteres. NOTA: Si la cadena es un palíndromo, la cadehna y su inversa coincidirán. 
+
+Algoritmo invertir_frase
+	
+	Definir frase como cadena
+	Leer frase
+	Definir l como entero
+	l = Longitud(frase)
+	Escribir invertir(frase,l)
+	
+FinAlgoritmo
+
+Funcion fraseInvertida <- invertir(frase,l)
+	
+	Definir fraseInvertida como cadena
+	
+	Si l = -1
+		fraseInvertida = ''
+	SiNo
+		fraseInvertida = Concatenar(subcadena(frase,l,l), invertir(frase,l-1))
+	FinSi
+FinFuncion
+
+//Funcion fraseInvertida2 <- invertirIterando(frase)
+//	Definir fraseInvertida2 como cadena
+//	fraseInvertida2 = '' 
+//	Definir i Como Entero
+	
+//	Para i = longitud(frase) hasta 0 con paso -1
+//		fraseInvertida2 = concatenar(fraseInvertida2, subcadena(frase,i,i))
+//	FinPara
+	
+//FinFuncion
+	

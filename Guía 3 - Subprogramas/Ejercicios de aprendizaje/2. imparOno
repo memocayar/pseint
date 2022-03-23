@@ -1,0 +1,25 @@
+Algoritmo imparOno
+	
+	Definir num Como Real
+	Escribir "Ingrese un número"
+	Leer num 
+	
+	Si esImpar(num) = Verdadero 
+		Escribir "El número " num " es impar." 
+	SiNo
+		Escribir "El número " num " no es impar."
+	FinSi
+	
+FinAlgoritmo
+
+Funcion impar <- esImpar(num)
+	
+	Definir impar Como Logico
+	
+	Si num % 2 = 0 Entonces
+		impar = Falso 
+	SiNo
+		impar = Verdadero
+	FinSi
+	
+FinFuncion

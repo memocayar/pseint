@@ -1,0 +1,22 @@
+Algoritmo intercambiarValores
+	
+	Definir a, b como entero
+	Escribir "Ingrese el valor para a" 
+	Leer a
+	Escribir "Ingrese el valor para b" 
+	Leer b
+	
+	intercambiar(a, b) 
+	
+	Escribir "a es " a " y b es " b 
+	
+FinAlgoritmo
+
+SubProceso intercambiar(a Por Referencia, b Por referencia)
+	
+	Definir aux Como Entero
+	aux = a 
+	a = b
+	b = aux
+	
+FinSubProceso

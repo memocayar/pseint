@@ -1,0 +1,14 @@
+//Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de edad se debe mostrar un mensaje por pantalla indicándolo.
+
+Algoritmo mayorDeEdad
+	
+	Definir edad Como entero
+	
+	Escribir "Ingrese su edad"
+	Leer edad
+	
+	Si edad >= 18
+		Escribir "Usted es mayor de edad."		
+	FinSi
+	
+FinAlgoritmo

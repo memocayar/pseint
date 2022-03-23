@@ -1,0 +1,27 @@
+Algoritmo cien_notas
+	
+	Definir notas, i, deficientes, regulares, buenos, excelentes como entero
+	Dimension notas(100)
+	deficientes = 0
+	regulares = 0 
+	buenos = 0
+	excelentes = 0
+	
+	Para i = 0 hasta 99
+		notas(i) = aleatorio(0,20)
+	FinPara
+	
+	Para i = 0 hasta 99 Hacer
+		Segun notas(i)
+			0,1,2,3,4,5: deficientes = deficientes + 1
+			6,7,8,9,10: regulares = regulares + 1
+			11,12,13,14,15: buenos = buenos + 1 
+			16,17,18,19,20: excelentes = excelentes + 1
+		FinSegun
+	FinPara
+	
+	Escribir "Alumnos deficientes: " deficientes
+	Escribir "Alumnos regulares: " regulares
+	Escribir "Alumnos buenos: " buenos
+	Escribir "Alumnos excelentes: " excelentes
+FinAlgoritmo

@@ -1,0 +1,19 @@
+Algoritmo sin_titulo
+	Definir n como entero
+	Escribir "Ingrese la altura de la escalera"
+	Leer n
+	escalera(n)
+	
+FinAlgoritmo
+
+SubProceso escalera(n)
+	Definir i, j como entero
+
+	Para i = 1 hasta n
+		Para j = 1 hasta i
+			Escribir sin saltar j
+		FinPara
+		Escribir ""
+	FinPara
+
+FinSubProceso

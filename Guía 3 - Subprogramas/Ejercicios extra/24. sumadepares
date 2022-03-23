@@ -1,0 +1,29 @@
+// Crear un programa que calcule la suma de los enteros positivos pares desde 2 hasta N.
+// Chequear que si N es impar se muestre un mensaje de error.
+
+Algoritmo sumadepares
+	Definir n Como Entero
+	
+	Hacer 
+		Escribir "Ingrese un número entero positivo par"
+		Leer n
+		
+		Si n % 2 <> 0
+			Escribir "El número ingresado no cumple con las condiciones. Presione una tecla para reintentar."
+			Esperar Tecla
+			Limpiar pantalla			
+		FinSi
+	Mientras Que n % 2 <> 0 o n<0
+	
+	Escribir "La suma de los enteros positivos pares hasta " n " es: " sumar(n)
+FinAlgoritmo
+
+Funcion suma <- sumar(n)
+	Definir suma Como Entero
+	
+	Si n=2 Entonces
+		suma = 2
+	SiNo
+		suma = n + sumar(n-2)
+	FinSi
+FinFuncion	

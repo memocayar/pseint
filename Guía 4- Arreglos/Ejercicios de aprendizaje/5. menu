@@ -1,0 +1,136 @@
+Algoritmo menu
+	
+	Definir op, op2 Como Caracter
+	Definir n, a, b, salir, i como entero
+	n = 0
+	salir = 0
+	a = 0
+	b = 0 
+	
+	Hacer 
+		Hacer 
+			Limpiar Pantalla
+			Escribir "¿Qué desea realizar?"
+			Escribir "a. Llenar Vector A"
+			Escribir "b. Llenar Vector B" 
+			Escribir "c. Llenar Vector C con la suma de los vectores A y B" 
+			Escribir "d. Llenar Vector C con la resta de los vectores B y A"
+			Escribir "e. Mostrar"
+			Escribir "f. Salir"
+			
+			Leer op
+			
+			Si op <> 'a' y op <> 'b' y op <> 'c' y op <> 'd' y op <> 'e' y op <> 'f'
+				Escribir "La opción ingresada no es válida. Intentelo nuevamente."
+				Escribir "Presione una tecla para continuar." 
+				Esperar tecla
+			FinSi
+		Mientras Que op <> 'a' y op <> 'b' y op <> 'c' y op <> 'd' y op <> 'e' y op <> 'f'
+		
+		Si n = 0 Entonces
+			Escribir "Ingresar dimension del vector"
+			Leer n
+			
+			Definir vectorA, vectorB, vectorC, vectorD como entero
+			Dimension vectorA(n), vectorB(n), vectorC(n), vectorD(n)
+		FinSi
+		
+		Segun op Hacer
+			'a': //llenar A con aleatorios
+				Para i = 0 hasta (n-1)
+					vectorA(i) = Aleatorio(-100,100)
+				FinPara
+				a = 1
+				Escribir "El vector A fue llenado. Presione una tecla para continuar."
+				Esperar Tecla
+				
+			'b': //llenar B con aleatorios
+				Para i = 0 hasta (n-1)
+					vectorB(i) = Aleatorio(-100,100)
+				FinPara
+				b = 1 
+				Escribir "El vector B fue llenado. Presione una tecla para continuar."
+				Esperar Tecla
+				
+			'c': // A + B  (verificar si A y B están llenos. Si no, poner mensaje.)
+				Si a = 1 y b = 1 Entonces
+					Para i = 0 hasta (n-1)
+						vectorC(i) = vectorA(i) + vectorB(i)			
+					FinPara
+					Escribir "El vector C fue llenado. Presione una tecla para continuar."
+					Esperar Tecla
+					
+				SiNo
+					Si a = 0 Entonces
+						Escribir "El vector A se encuentra vacío."
+					FinSi
+					Si b = 0 Entonces 
+						Escribir "El vector B se encuentra vacío."
+					FinSi
+					Escribir "Presione una tecla para continuar."
+					Esperar Tecla
+				FinSi
+				
+			'd': // A - B (verificiar...)
+				Si a = 1 y b = 1 Entonces
+					Para i = 0 hasta (n-1)
+						vectorC(i) = vectorA(i) - vectorB(i)			
+					FinPara
+					Escribir "El vector D fue llenado. Presione una tecla para continuar."
+					Esperar Tecla
+					
+				SiNo
+					Si a = 0 Entonces
+						Escribir "El vector A se encuentra vacío."
+					FinSi
+					Si b = 0 Entonces 
+						Escribir "El vector B se encuentra vacío."
+					FinSi
+					Escribir "Presione una tecla para continuar."
+					Esperar Tecla
+				FinSi
+				
+			'e': // Mostrar. Preguntar qué mostrar. 
+				Hacer 
+					Escribir "¿Qué vector desea mostrar?" 
+					Escribir "A          B           C"
+					Leer op2
+					
+					Si op2 <> 'A' y op2 <> 'B' y op2 <> 'C'
+						Escribir "La opción ingresada no es correcta. Intentelo nuevamente."
+					FinSi
+				Mientras Que op2 <> 'A' y op2 <> 'B' y op2 <> 'C'
+				
+				Escribir "El vector " op2 " es: "
+				Segun op2
+					'A':
+						Para i = 0 hasta (n-2)
+							Escribir sin saltar vectorA(i) ", "
+						FinPara
+						Escribir vectorA(n-1)
+						Escribir "Presione una tecla para continuar."
+						Esperar Tecla
+						
+					'B':
+						Para i = 0 hasta (n-2)
+							Escribir Sin Saltar vectorB(i) ", "
+						FinPara
+						Escribir vectorB(n-1)
+						Escribir "Presione una tecla para continuar."
+						Esperar Tecla
+						
+					'C':
+						Para i = 0 hasta (n-2)
+							Escribir sin saltar vectorC(i) ", "
+						FinPara
+						Escribir vectorC(n-1)
+						Escribir "Presione una tecla para continuar."
+						Esperar Tecla
+				FinSegun
+				
+			'f':
+				salir = 1 
+		FinSegun
+	Mientras Que salir = 0
+
+FinAlgoritmo

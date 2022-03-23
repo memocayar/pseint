@@ -1,0 +1,23 @@
+//Escribir una función recursiva que devuelva la suma de los primeros N enteros
+
+Algoritmo sin_titulo
+	
+	Definir n Como Real
+	Leer n
+	
+	Escribir suma(n)
+	
+FinAlgoritmo
+
+Funcion resultado <- suma(n)
+	
+	Definir resultado Como Real
+	
+	Si n=1 Entonces
+		resultado = 1
+	SiNo
+		resultado = n + suma(n-1)
+	FinSi
+	
+FinFuncion
+	

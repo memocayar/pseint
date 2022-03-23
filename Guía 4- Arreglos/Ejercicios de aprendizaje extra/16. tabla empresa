@@ -1,0 +1,77 @@
+// SIN TERMINAR (ES ETERNO)
+
+Algoritmo sin_titulo
+	Definir i, j como entero
+	Definir tabla como cadena
+	Dimension tabla(16,7)
+	formato(tabla)
+	rellenar(tabla)
+	imprimirr(tabla)
+	
+FinAlgoritmo
+
+SubProceso rellenar(tabla)
+	Definir i, j Como Entero
+	
+	Para i = 3 hasta 11 Hacer
+		Para j = 1 hasta 5
+			Si i % 2 <> 0
+				// tabla(i,j) = Aleatorio(1,10)                ERROR
+			FinSi
+		FinPara
+	FinPara
+	
+FinSubProceso
+
+
+SubProceso formato(tabla Por Referencia)
+	Definir i, j Como Entero
+	
+	Para i = 0 hasta 15
+		Para j = 0 hasta 6
+			tabla(i,j) = ""
+		FinPara
+	FinPara
+	
+	tabla(1,0) = ""
+	tabla(1,1) = "  Lunes"
+	tabla(1,2) = "  Martes" 
+	tabla(1,3) = "  Miercoles" 
+	tabla(1,4) = "  Jueves"
+	tabla(1,5) = "  Viernes"
+	tabla(1,6) = "Total producto"
+	tabla(3,0) = "Producto 1"
+	tabla(5,0) = "Producto 2"
+	tabla(7,0) = "Producto 3"
+	tabla(9,0) = "Producto 4"
+	tabla(11,0) = "Producto 5"
+	tabla(13,0) = "Total semana"
+	tabla(15,0) = "Prod + vendido"
+FinSubProceso
+
+SubProceso imprimirr(tabla)
+	Definir i, j, k, e Como Entero
+	e = 15
+	
+	Para i = 0 hasta 16
+		Si i % 2 <> 0
+			Para j = 0 hasta 6
+				Si tabla(i,j) = "" Entonces
+					Escribir sin saltar "|               |"
+				SiNo
+					Escribir sin saltar "|" tabla(i,j) 
+					e = e - Longitud(tabla(i,j))
+					Para k = 1 hasta e
+						Escribir sin saltar  " " 
+					FinPara
+					Escribir sin saltar "|"
+					e=15
+				FinSi
+			FinPara
+			Escribir ""
+		SiNo
+			Escribir sin saltar "_______________________________________________________________________________________________________________________"
+			Escribir ""
+		FinSi
+	FinPara
+FinSubProceso

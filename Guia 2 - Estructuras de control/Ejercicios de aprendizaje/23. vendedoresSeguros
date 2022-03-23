@@ -1,0 +1,31 @@
+// n vendedores
+// vendedor -> sueldo base + 10% comisiones 
+// devolver -> cuánto dinero deberá pagar en la semana a cada vendedor por comisiones y cuánto sería el sueldo total
+// ingresar -> sueldo base, cantidad de ventas y cuánto cobro por cada venta
+
+Algoritmo vendedoresSeguros
+	
+	Definir sueldoBase, cantVentas, venta, totalVentas, i, comision, sueldoTotal Como Real
+	Escribir "Ingrese el sueldo base:"
+	Leer sueldoBase
+	Escribir "Ingrese la cantidad de ventas realizadas:"
+	Leer cantVentas
+	
+	Si cantVentas = 0 Entonces
+		Escribir "Esta semana el vendedor sólo recibirá el sueldo base. Sueldo total: $ " sueldoBase
+	Sino 
+		Si cantVentas >= 1
+			totalVentas = 0 
+			Para i = 1 Hasta cantVentas
+				Escribir "Ingrese monto de la " i "° venta."
+				Leer venta
+				totalVentas = totalVentas + venta
+			FinPara
+			comision = 10 * totalVentas / 100
+			sueldoTotal = sueldoBase + comision
+			
+			Escribir "Esta semana el vendedor recibirá $ " comision " por comisiones. Sueldo total: $ " sueldoTotal
+		FinSi		
+	FinSi
+
+FinAlgoritmo

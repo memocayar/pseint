@@ -1,0 +1,98 @@
+Algoritmo sin_titulo
+	
+	// Defino las variables, pido n y dimensiono la matriz y el vector sumas
+	Definir matriz, n, sumas, i, j Como Entero 
+	Definir magica como logico
+	
+	Hacer 
+		Escribir "Ingrese la dimension de la matriz. (Mayor o igual a 2 menor o igual a 10)" 
+		Leer n 
+		
+		Si 2 > n o n > 10 Entonces
+			Escribir "Inténtelo nuevamente."
+		FinSi
+	Mientras Que 2 > n o n > 10 
+	
+	Dimension matriz(n,n), sumas(n*2+2)
+	
+	// Rellena la matriz
+	Para i = 0 hasta n-1
+		Para j = 0 hasta n-1
+			Hacer 
+				Escribir "Ingrese el valor para la posición (" i "," j ")"
+				Leer matriz(i,j)
+				Si matriz(i,j) > 9 o matriz(i,j) < 1 Entonces
+					Escribir "El valor debe ser mayor o igual a 1 y menor o igual a 9"
+					Escribir "Presione una tecla para intentarlo nuevamente."
+					Esperar tecla
+				FinSi
+			Mientras Que matriz(i,j) > 9 o matriz(i,j) < 1
+		FinPara
+	FinPara
+	
+	//Escribo la matriz
+
+	Para i = 0 hasta n-1
+		Escribir ""
+		Para j = 0 hasta n-1
+			Escribir sin saltar matriz(i,j)
+		FinPara
+	FinPara
+	Escribir ""
+	Escribir ""
+	
+	// Inicio cada posición de vector sumas en 0 
+	para i = 0 hasta (n*2+1) hacer
+		sumas(i) = 0
+	finpara
+	
+	// Lleno el vector con las sumas de...
+	// las filas 
+	para i = 0 hasta n-1 hacer
+		para j=0 hasta n-1 hacer
+			sumas(i) = sumas(i) + matriz(i,j)
+		finpara
+	finpara
+	
+	// las columnas
+	para j = 0 hasta n-1 hacer
+		para i = 0 hasta n-1 hacer
+			sumas(j+n) = sumas(j+n) + matriz(i,j)
+		finpara
+	finpara
+	
+	// las diagonales
+	para i=0 hasta n-1 hacer
+		sumas(2*n) = sumas(2*n) + matriz(i,i)
+	FinPara
+	
+	para i=0 hasta n-1 hacer
+		sumas(2*n+1) = sumas(2*n+1) + matriz(i,n-1)
+	finpara
+	
+	// escribo el vector sumas (inecesario)
+	Escribir "Sumas: "
+	para i = 0 hasta n*2+1
+		Escribir sin saltar sumas(i) "  "
+	FinPara
+	
+	// verifico si todas las sumas (posiciones) son iguales
+	Para i = 0 hasta (n*2+1) Hacer
+		Si sumas(0) = sumas(i)
+			magica = Verdadero
+		SiNo
+			magica = Falso
+			i = n*2+1
+		FinSi
+	FinPara
+	
+	Escribir "" 
+	Escribir "" 
+	
+	Si magica = verdadero 
+		Escribir "La matriz es mágica." 
+	SiNo 
+		Escribir "La matriz no es mágica :("
+	FinSi
+	
+FinAlgoritmo

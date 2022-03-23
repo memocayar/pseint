@@ -1,0 +1,35 @@
+Algoritmo sin_titulo
+	Definir n como entero
+	Definir rta Como Caracter
+	Escribir "Ingresar el número de término de la sucesión de Fibonacci que desea conocer." 
+	Leer n 
+	
+	Escribir "El término es: " fibonacci(n)
+	
+	Escribir "Desea escribir la sucesión? (s/n)"
+	Leer rta
+	Si rta = "s"
+		Escribir sucesion(n)
+	FinSi
+FinAlgoritmo
+
+Funcion f <- fibonacci(n)
+	Definir f Como Entero
+	Si n <= 1 Entonces
+		f = 1 
+	SiNo
+		f = fibonacci(n-1) + fibonacci(n-2)
+	FinSi
+FinFuncion
+
+Funcion s <- sucesion(n)
+	Definir i como entero
+	Para i = 0 Hasta n
+		Si i = n Entonces
+			Escribir sin saltar fibonacci(i) "... "
+		SiNo
+			Escribir sin saltar fibonacci(i) ", "
+		FinSi
+	FinPara
+FinFuncion
+	

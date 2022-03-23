@@ -1,0 +1,33 @@
+//Solicitar al usuario que ingrese un valor entre 1 y 7. EL programa debe mostrar por
+//pantalla un mensaje que indique a qué día de la semana corresponde. Considere que el
+//número 1 corresponde al día "Lunes", y así sucesivamente
+
+Algoritmo numDia
+	
+	Definir num como entero
+	
+	Repetir 
+		Escribir "Ingrese un valor entre 1 y 7"
+		Leer num 
+		Si num < 1 o num > 7
+			Escribir "El número ingresado no es válido. Intentelo nuevamente."
+		FinSi
+	Mientras Que num < 1 o num > 7
+	
+	Segun num Hacer
+		1: Escribir "Corresponde al día Lunes."
+			
+		2: Escribir "Corresponde al día Martes."
+			
+		3: Escribir "Corresponde al día Miércoles."
+			
+		4: Escribir "Corresponde al día Jueves."
+			
+		5: Escribir "Corresponde al día Viernes."
+			
+		6: Escribir "Corresponde al día Sábado."
+			
+		7: Escribir "Corresponde al día Domingo."
+	FinSegun
+	
+FinAlgoritmo

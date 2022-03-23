@@ -1,0 +1,28 @@
+//Diseñar una función que reciba un numero en forma de cadena y lo devuelva como
+//numero entero. El programa podrá recibir números de hasta 3 dígitos. Nota: no poner
+// números con decimales
+
+
+Algoritmo sin_titulo
+	
+	Definir cad como cadena
+	Hacer 
+		Escribir "Ingrese un número entero de hasta 3 dígitos." 
+		Leer cad
+		
+		Si Longitud(cad) >= 3
+			Escribir "Error. El número posee más de 3 dígitos."
+		FinSi
+	Mientras Que Longitud(cad) >= 3
+
+	Escribir palabraAnum(cad)
+	
+FinAlgoritmo
+
+
+Funcion num <- palabraAnum(cad)
+	
+	Definir num Como real
+	num = ConvertirANumero(cad)
+	
+FinFuncion

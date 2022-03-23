@@ -1,0 +1,18 @@
+//Crea un procedimiento "convertirEspaciado", que reciba como argumento un texto y
+//muestra una cadena con un espacio adicional tras cada letra
+
+Algoritmo frase_espaciada
+	Definir frase como cadena
+	Escribir "Ingresar frase"
+	Leer frase
+	convertirEspaciado(frase)
+FinAlgoritmo
+
+SubProceso convertirEspaciado(frase) //por defecto se pasa Por Valor
+	Definir i Como Entero
+	Para i = 0 hasta Longitud(frase)
+		Escribir sin saltar subcadena(frase,i,i) " "
+	FinPara
+	Escribir ""
+FinSubProceso
+	

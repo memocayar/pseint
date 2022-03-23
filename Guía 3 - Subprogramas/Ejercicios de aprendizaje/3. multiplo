@@ -1,0 +1,30 @@
+Algoritmo multiplo
+	
+	Definir a, b Como Real
+	Escribir "¿a es múltiplo de b?"
+	Escribir "Ingrese un valor para a."
+	Leer a
+	Escribir "Ingrese un valor para b."
+	Leer b 
+	
+	Si EsMultiplo(a,b) = Verdadero Entonces
+		Escribir a " es múltiplo de " b
+	SiNo
+		Escribir a " no es múltiplo de " b
+	FinSi
+	
+	
+FinAlgoritmo
+
+Funcion mult <- EsMultiplo(a, b) 
+	
+	Definir mult Como Logico
+	
+	Si a % b = 0 Entonces
+		mult = Verdadero
+	SiNo
+		mult = Falso
+	FinSi
+	
+FinFuncion
+	

@@ -1,0 +1,37 @@
+// Programe una función que calcule el producto de un arreglo de números enteros. Para
+// esto imagine, por ejemplo, que para un vector V de tamaño 4, el producto de todos los
+// valores es igual a (V[1]*V[2]*V[3]*V[4])
+
+
+
+Algoritmo producto_vector
+	Definir n, arreglo, i Como Entero
+	n = Aleatorio(2,10)
+	Dimension arreglo(n)
+	
+	Para i = 0 hasta n-1
+		arreglo(i) = Aleatorio(1,10)
+	FinPara
+	
+	Para i = 0 hasta n-1
+		Escribir sin saltar arreglo(i) "  "
+	FinPara
+	Escribir ""
+	Escribir ""
+	
+	Escribir "El producto de todos los valores del arreglo es " multiplicar(arreglo,n-1)
+	
+FinAlgoritmo
+
+Funcion producto <- multiplicar(arreglo,n)
+	Definir producto, i como entero
+	
+	Si n = 0 Entonces
+		producto = arreglo(n)
+	SiNo
+		producto = arreglo(n) * multiplicar(arreglo, (n-1))
+	FinSi
+
+FinFuncion
+
+	

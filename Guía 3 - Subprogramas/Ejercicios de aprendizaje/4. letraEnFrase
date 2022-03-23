@@ -1,0 +1,27 @@
+Algoritmo letraEnFrase
+	
+	Definir frase, letra como cadena 
+	Escribir "Ingrese una frase" 
+	Leer frase 
+	Escribir "Ingrese la letra que desea buscar"
+	Leer letra
+	
+	Escribir "La letra " letra " se encontró " BuscarLetra(frase, letra) " veces en la frase " frase
+	
+FinAlgoritmo
+
+Funcion cant <- BuscarLetra(frase, letra) 
+	
+	frase = minusculas(frase)
+	letra = minusculas(letra)
+	
+	Definir cant, i como real 
+	cant = 0 
+	
+	Para i = 0 hasta longitud(frase)
+		Si Subcadena(frase, i, i) = letra entonces 
+			cant = cant + 1
+		FinSi
+	FinPara	
+	
+FinFuncion

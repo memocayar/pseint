@@ -1,0 +1,39 @@
+// Programe una función recursiva que calcule la suma de un arreglo de números enteros
+
+Algoritmo suma_recursiva
+	Definir n, arreglo, i Como Entero
+	n = Aleatorio(2,10)
+	Dimension arreglo(n)
+	
+	Para i = 0 hasta n-1
+		arreglo(i) = Aleatorio(1,10)
+	FinPara
+	
+	Para i = 0 hasta n-1
+		Escribir sin saltar arreglo(i) "  "
+	FinPara
+	Escribir ""
+	Escribir ""
+	
+	Escribir "La suma de todos los valores del arreglo es " sumar(arreglo,n-1)
+	
+FinAlgoritmo
+
+Funcion suma <- sumar(arreglo,n)
+	Definir suma, i como entero
+	
+	Si n = 0 Entonces
+		suma = arreglo(n)
+	SiNo
+		suma = arreglo(n) + sumar(arreglo, (n-1))
+	FinSi
+
+FinFuncion
+
+// forma no recursiva sería: 
+
+//	Para i = 0 hasta n-1 Hacer
+//		suma = suma + arreglo(i)
+//	FinPara
+
+	

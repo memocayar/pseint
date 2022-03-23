@@ -1,0 +1,32 @@
+Algoritmo sin_titulo
+	Definir matriz, vector, resultante, i, j Como Entero
+	Dimension matriz(3,3), vector(3), resultante(3)
+	
+	//Inicializar
+	Para i = 0 hasta 2 Hacer
+		Para j = 0 hasta 2 Hacer
+			matriz(i,j) = aleatorio(1,9)
+		FinPara
+		vector(i) = Aleatorio(1, 9)
+		resultante(i) = 0
+	FinPara
+	
+
+	// Multiplicación de matriz * vector 
+	Para i = 0 hasta 2
+		Para j = 0 hasta 2 Hacer
+			resultante(i) = resultante(i) + matriz(i,j) * vector(i)
+		FinPara
+	FinPara
+	
+	//Mostrar
+	Para i = 0 hasta 2 Hacer
+		Para j = 0 hasta 2 Hacer
+			Escribir sin saltar matriz(i,j) " "
+		FinPara
+		Escribir sin saltar  "    " vector(i) 
+		Escribir sin saltar  "     " resultante(i) 
+		Escribir ""
+	FinPara
+	
+FinAlgoritmo

@@ -1,0 +1,32 @@
+// Teniendo en cuenta que la clave es "eureka", escribir un programa que nos pida ingresar
+// una clave. Sólo se cuenta con 3 intentos para acertar, si fallamos los 3 intentos se deberá
+// mostrar un mensaje indicándonos que hemos agotado esos 3 intentos. Si acertamos la
+// clave se deberá mostrar un mensaje que indique que se ha ingresado al sistema
+// correctamente.
+
+Algoritmo claveEureka
+	
+	Definir claveIngresada, claveCorrecta como cadena
+	claveCorrecta = "eureka"
+	Definir intentos Como Real
+	intentos = 0
+	
+	Hacer 
+		Escribir "Ingrese la clave" 
+		Leer claveIngresada
+		
+		Si claveIngresada = claveCorrecta
+			Escribir "Usted ha ingresado al sistema correctamente."
+			intentos = 4
+		SiNo
+			intentos = intentos + 1
+			Si intentos < 3 Entonces
+				Escribir "La clave ingresada es incorrecta. Intentelo nuevamente."
+			Sino 
+				Escribir "La clave ingresada es incorrecta"
+				Escribir "Usted agotó los 3 intentos."
+			FinSi
+		FinSi		
+	Mientras Que intentos < 3
+	
+FinAlgoritmo

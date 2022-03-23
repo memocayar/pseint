@@ -1,0 +1,33 @@
+Algoritmo codificarFrase
+	
+	Definir frase como cadena
+	Escribir "Ingresar frase una frase terminada en punto"
+	Leer frase 
+	
+	codificar(frase)
+	Escribir frase
+
+FinAlgoritmo
+
+SubProceso codificar(frase por referencia)
+	
+	Definir i Como Real
+	Definir frase2 como cadena 
+	frase2 = ''
+	
+	Para i = 0 hasta Longitud(frase)
+		
+		Segun Subcadena(frase, i, i)
+			'a': frase2 = concatenar(frase2, '@')
+			'e': frase2 = concatenar(frase2, '#')
+			'i': frase2 = concatenar(frase2, '$')
+			'o': frase2 = concatenar(frase2, '%')
+			'u': frase2 = concatenar(frase2, '*')
+			de otro modo: frase2 = concatenar(frase2, Subcadena(frase, i, i))
+		FinSegun
+		
+	FinPara
+	
+	frase = frase2
+	
+FinSubProceso

@@ -1,0 +1,38 @@
+Algoritmo cuadradoDeAsteriscos
+	
+	Definir a, b, c, d, num, espacios, filas Como Entero
+	Escribir "Ingrese un número entero" 
+	Leer num
+	filas = num - 2
+	espacios = num - 2 
+	
+	Si num = 1 Entonces
+		Escribir '*'
+		
+	Sino
+		Para a = 1 hasta num Hacer
+			Escribir Sin Saltar '*'
+		FinPara
+		
+		Escribir ''
+		
+		Si filas >= 1 Entonces
+			Para b = 1 hasta filas 
+				Escribir sin saltar '*'
+				
+				Para c = 1 Hasta espacios
+					Escribir sin saltar ' ' 
+				FinPara
+				
+				Escribir '*'
+			FinPara
+		FinSi
+		
+		Para d = 1 hasta num Hacer
+			Escribir Sin Saltar '*'
+		FinPara
+		
+		Escribir ''		
+	FinSi
+	
+FinAlgoritmo

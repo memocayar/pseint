@@ -1,0 +1,35 @@
+Algoritmo eficienciaOperario
+	
+	Definir condicion1, condicion2 Como Logico
+	
+	Escribir "Indicar si las siguientes opciones son verdaderas o falsas ingresando la palabra correspondiente (VERDADERO/FALSO)"
+	Escribir "Produjo menos de 200 tornillos defectuosos."
+	Leer condicion1
+	Escribir "Produjo más de 10 000 tornillos sin defectos."
+	Leer condicion2
+	
+	Definir grado como entero 	
+	
+	Si condicion1 = FALSO y condicion2 = FALSO
+		grado = 5
+		
+		Sino Si condicion1 = VERDADERO y condicion2 = FALSO
+			grado = 6
+			
+			Sino Si condicion1 = FALSO y condicion2 = VERDADERO 
+				grado = 7
+				
+				Sino Si condicion1 = VERDADERO y condicion2 = VERDADERO
+					grado = 8
+				FinSi
+				
+			FinSi
+			
+		FinSi
+		
+	FinSi
+	
+	Escribir "Su eficienciencia es de grado " grado
+	
+	
+FinAlgoritmo

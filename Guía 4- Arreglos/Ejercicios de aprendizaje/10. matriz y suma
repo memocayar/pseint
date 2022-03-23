@@ -1,0 +1,46 @@
+Algoritmo sin_titulo
+	Definir n, m, matriz, i, j Como Entero
+	
+	Escribir "Ingrese un valor para n"
+	Leer n
+	Escribir "Ingrese un valor para m"
+	Leer m
+	
+	Dimension matriz(n,m)
+	
+	Para i = 0 hasta n-1
+		Para j = 0 hasta m-1
+			matriz(i,j) = aleatorio(-100,100)
+		FinPara
+	FinPara
+	
+	Para i = 0 hasta n-1
+		Escribir ""
+		Para j = 0 hasta m-1
+			Escribir sin saltar matriz(i,j) "   "
+		FinPara
+	FinPara
+	Escribir ""
+	
+	suma(matriz,n,m)
+	
+FinAlgoritmo
+
+SubProceso suma(matriz,n,m)
+	
+	Definir i, j, s Como Entero
+	s = 0 
+	
+	Para i = 0 hasta n-1
+		Para j = 0 hasta m-1
+			s = s + matriz(i,j)
+		FinPara
+	FinPara
+	
+	Escribir ""
+	Escribir "La suma de los números de la matriz es " s
+	
+	// no entiendo si este paso es correcto o el escribir debería ir en el Algoritmo principal. Pero si ese
+	// es el caso, cómo devuelvo el valor ?¿
+
+FinSubProceso

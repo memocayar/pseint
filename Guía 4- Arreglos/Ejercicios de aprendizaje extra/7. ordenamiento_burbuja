@@ -1,0 +1,39 @@
+// Crear un programa que ordene un vector lleno de números enteros aleatorios, de menor
+// a mayor. Nota: investigar el ordenamiento burbuja en el siguiente link: Ordenamiento
+//	Burbuja.
+
+Algoritmo ordenamiento_burbuja
+	
+	Definir n, vector, aux, i, j como entero
+	n = aleatorio(2,10) 
+	Escribir "n: " n
+	Dimension vector(n)
+	
+	Para i = 0 hasta n-1
+		vector(i) = Aleatorio(1,100)
+	FinPara
+	
+	Para i = 0 hasta n-1
+		Escribir sin saltar vector(i) "  "
+	FinPara
+	
+	Para i = 0 hasta n-2 Hacer
+		Para j = 0 hasta n-2 Hacer
+			Si vector(j) > vector(i+1) Entonces
+				aux = vector(j)
+				vector(j) = vector(i+1)
+				vector(i+1) = aux
+			FinSi
+		FinPara
+	FinPara
+	
+	Escribir ""
+	Escribir ""
+	Escribir "Vector ordenado:"
+	
+	Para i = 0 hasta n-1
+		Escribir sin saltar vector(i) "  "
+	FinPara
+	
+	
+FinAlgoritmo

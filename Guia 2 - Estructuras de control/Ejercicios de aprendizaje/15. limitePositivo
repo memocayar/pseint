@@ -1,0 +1,27 @@
+// Escriba un programa en el cual se ingrese un valor límite positivo, y a continuación
+// solicite números al usuario hasta que la suma de los números introducidos supere el
+// límite inicial.
+
+Algoritmo limitePositivo
+	
+	Definir limite, num, suma Como Real
+	suma = 0
+	
+	Hacer 
+		Escribir "Ingrese un valor límite. Este debe ser positivo."
+		Leer limite
+		
+		Si limite < 0 Entonces
+			Escribir "El limite ingresado no es positivo. Intentelo nuevamente."
+		FinSi
+	Mientras  que limite < 0
+
+	Hacer 
+		Escribir "Ingrese un número."
+		Leer num 
+		suma = suma + num
+	Mientras Que suma < limite 
+	
+	Escribir "La suma de los números ingresados es " suma 
+	
+FinAlgoritmo

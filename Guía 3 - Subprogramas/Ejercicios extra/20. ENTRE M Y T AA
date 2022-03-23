@@ -1,0 +1,17 @@
+Algoritmo sin_titulo
+	Definir letra Como cadena
+	Escribir "Ingrese la letra a evaluar"
+	Leer letra 
+	subpro(letra)
+	
+FinAlgoritmo
+
+SubProceso subpro(letra)
+	//letra = convertiranumero(letra)
+	Escribir letra
+	Si letra >= 77 y letra <= 84
+		Escribir "La letra " letra " se encuentra entre las letras M y T."
+	FinSi
+	
+FinSubProceso
+	

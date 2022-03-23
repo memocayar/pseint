@@ -1,0 +1,63 @@
+// Realizar una función que reciba un numero ingresado por el usuario y averigüe si el
+// numero es capicúa o no
+
+Algoritmo capicuaa
+	Definir n Como real
+	Escribir "Ingrese el número a evaluar" 
+	Leer n
+	
+	Si capicua(n) = Verdadero
+		Escribir "El número ingresado es capicúa."
+	SiNo
+		Escribir "El número ingresado no es capicúa."
+	FinSi
+FinAlgoritmo
+
+Funcion rta <- capicua(n)
+	Definir rta Como Logico
+	Definir vector1, vector2, x, i, j Como Entero
+	x = cifras(n)
+	Dimension vector1(x), vector2(x)
+	
+	Para i = 0 hasta x-1
+		vector2(i) = (n%10)
+		n = trunc(n/10)
+	FinPara
+	
+	j=0
+	Para i = x-1 con paso -1 hasta 0
+		vector1(j) = vector2(i)
+		j = j+1
+	FinPara
+	
+	i=0
+	Hacer 
+		Si vector1(i) = vector2(i)
+			rta = Verdadero
+			i = i + 1
+		SiNo
+			rta = falso
+		FinSi
+	Mientras Que rta = Verdadero y i < x
+	
+	
+//	ESCRIBIR VECTORES
+	
+//	Para i = 0 hasta x-1
+//		Escribir sin saltar vector1(i) "  "
+//	FinPara
+//	Escribir ""
+//	Para i = 0 hasta x-1
+//		Escribir sin saltar vector2(i) "  "
+//	FinPara
+FinFuncion
+
+SubProceso  cant <- cifras(n) 
+	Definir cant Como Entero
+	cant = 0 
+	Mientras n>1
+		n = n/10
+		cant = cant + 1
+	FinMientras
+FinSubProceso
+

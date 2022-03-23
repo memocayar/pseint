@@ -1,0 +1,40 @@
+// -> ingresar hora en la que se retiró el auto, y hora en la que se devolvió 
+// -> si la diferencia entre ambas es >= 120 minutos -> pagará $400. Nafta de regalo 
+// -> sino, 
+// 			-> ingresar cantidad de litros de nafta gastados. Cada litro - $ 40
+// 			-> calcular: cada min de uso - $ 5,20 
+// 			-> devolver total a pagar (nafta + min de uso)
+
+
+Algoritmo alquilerAutos
+	
+	Definir num, retiro, devolucion, uso, nafta, total Como Real
+	
+	Escribir "Hora de retiro en formato HH:MM " 
+	Escribir "Ingrese la hora (HH)" 
+	Leer num 
+	retiro = num * 60
+	Escribir "Ingrese los minutos (" num ":MM)"
+	Leer num 
+	retiro = retiro + num
+	
+	Escribir "Hora de devolución en formato HH:MM"
+	Escribir "Ingrese la hora (HH)" 
+	Leer num 
+	devolucion = num * 60
+	Escribir "Ingrese los minutos (" num ":MM)"
+	Leer num 
+	devolucion = devolucion + num
+	
+	uso = devolucion - retiro
+	
+	Si uso <= 120 Entonces
+		Escribir "El costo total del servicio es $ 400. La nafta está bonificada."
+	SiNo
+		Escribir "Ingrese la cantidad de nafta utilizada en litros."
+		Leer nafta
+		total = nafta * 40 + uso * 5.20
+		Escribir "El costo total del servicio es $ " total 
+	FinSi
+	
+FinAlgoritmo

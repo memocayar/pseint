@@ -1,0 +1,21 @@
+// Realizar una función que calcule la suma de los dígitos de un numero.
+
+Algoritmo sumar_cifras
+	Definir n Como Real
+	Escribir "Ingrese un número" 
+	Leer n 
+	Escribir "La suma de las cifras del número " n " es " sumar(n)
+	
+FinAlgoritmo
+
+Funcion suma <- sumar(n)
+	Definir suma Como Real
+	suma = 0 
+	
+	Mientras n>0
+		suma = suma + (n % 10) 
+		n = trunc(n/10)
+	FinMientras
+
+FinFuncion
+	

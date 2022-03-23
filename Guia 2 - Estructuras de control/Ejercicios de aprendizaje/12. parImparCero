@@ -1,0 +1,21 @@
+//. Realizar un programa que, dado un número entero, visualice en pantalla si es par o impar.
+//En caso de que el valor ingresado sea 0, se debe mostrar "el número no es par ni impar".
+//Nota: investigar la función mod de PSeInt 
+
+Algoritmo parImparCero
+	
+	Definir num Como Real
+	Escribir "Ingrese un número:"
+	Leer num
+	
+	Si num = 0 Entonces
+		Escribir "El número no es par ni impar."
+	Sino Si num % 2 = 0
+			Escribir "El número ingresado es par."
+			
+		SiNo
+			Escribir "El número ingresado es impar."
+		FinSi
+	FinSi
+
+FinAlgoritmo

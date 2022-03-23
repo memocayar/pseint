@@ -1,0 +1,33 @@
+Algoritmo sin_titulo
+	
+	Definir matriz, frase Como cadena
+	Definir i, j, k como entero
+	Dimension matriz(3,3)
+	
+	Hacer 
+		Escribir "Ingrese una frase de máximo 9 carácteres"
+		Leer frase
+		
+		Si Longitud(frase) > 9 Entonces
+			Escribir "La frase supera el máximo de 9 caracteres. Intentelo nuevamente."
+			Limpiar Pantalla
+		FinSi
+	Mientras Que Longitud(frase) > 9
+	
+	k = 0
+	Para i = 0 hasta 2
+		Para j = 0 hasta 2
+			matriz(i,j) = Subcadena(frase,k,k)
+			k = k+1
+		FinPara
+	FinPara
+	
+	Para i = 0 hasta 2
+		Escribir ""
+		Para j = 0 hasta 2
+			Escribir sin saltar matriz(i,j) "  "
+		FinPara
+	FinPara
+	Escribir ""
+	
+FinAlgoritmo

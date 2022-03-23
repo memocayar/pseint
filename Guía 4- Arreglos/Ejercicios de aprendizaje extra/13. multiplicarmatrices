@@ -1,0 +1,48 @@
+Algoritmo multiplicarmatrices
+	Definir matriz1, matriz2, matriz3, i, j, rta Como Entero
+	Dimension matriz1(3,3), matriz2(3,3), matriz3(3,3)
+	
+	Para i = 0 hasta 2
+		Para j = 0 hasta 2
+			matriz1(i,j) = Aleatorio(1,100)
+			matriz2(i,j) = Aleatorio(1,100)
+		FinPara
+	FinPara
+	
+	Para i = 0 hasta 2
+		Para j = 0 hasta 2
+			matriz3(i,j) = matriz1(i,j) * matriz2(i,j)
+		FinPara
+	FinPara
+	
+	Hacer 
+		Escribir "Mostrar matriz: "
+		Escribir "0- salir | 1- matriz 1 | 2- matriz 2 | 3- matriz 3 | 4- todas"
+		Leer rta
+		Segun rta
+			1: mostrarr(matriz1)
+			2: mostrarr(matriz2)
+			3: mostrarr(matriz3)
+			4: 	mostrarr(matriz1) 
+				mostrarr(matriz2)
+				mostrarr(matriz3)
+		FinSegun
+	Mientras Que rta <> 0
+FinAlgoritmo
+
+SubProceso mostrarr(matriz)
+	Definir i, j Como Entero
+	Escribir "" 
+	Para i = 0 hasta 2
+		Para j = 0 hasta 2
+			Escribir Sin Saltar matriz(i,j) "    "
+		FinPara
+		Escribir ""
+	FinPara
+	Escribir ""
+FinSubProceso
+
+
+
+
+

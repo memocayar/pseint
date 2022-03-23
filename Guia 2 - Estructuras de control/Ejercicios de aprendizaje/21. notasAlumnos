@@ -1,0 +1,65 @@
+Algoritmo notasAlumnos
+	
+	Definir cantAlumnos, i, integrador, exposicion, parcial, notaFinal, reprobados, notaReprobados, mayor75, mayorNotaExp, entre4y75 como real
+	reprobados = 0
+	mayor75 = 0 
+	mayorNotaExp = 0 
+	entre4y75 = 0 
+	notaReprobados = 0 
+	
+	Escribir "Ingrese cantidad total de alumnos" 
+	Leer cantAlumnos
+	
+	Para i = 1 Hasta cantAlumnos
+		Limpiar pantalla 
+		
+		Escribir "Para el " i "° alumno."
+		Escribir "Ingrese nota del TP Integrador:"
+		Leer integrador
+		Escribir "Ingrese nota de la exposición:"
+		Leer exposicion
+		Escribir "Ingrese nota del parcial" 
+		Leer parcial 
+		
+		notaFinal = (integrador * 35 / 100) + (exposicion * 25 / 100) + (parcial * 40 / 100)
+		
+		Si notaFinal < 6.5 Entonces
+			reprobados = reprobados + 1
+			notaReprobados = notaReprobados + notaFinal
+		FinSi
+		
+		Si integrador > 7.5 Entonces
+			mayor75 = mayor75 + 1 
+		FinSi
+		
+		Si exposicion > mayorNotaExp Entonces
+			mayorNotaExp = exposicion
+		FinSi
+		
+		Si parcial > 4.0 y parcial < 7.5 Entonces
+			entre4y75 = entre4y75 + 1
+		FinSi
+		
+	FinPara
+	
+	Definir promedioReprobados, porcentajeMayor75 Como Real
+	porcentajeMayor75 = mayor75 * 100 / cantAlumnos
+	
+	Si reprobados > 0 Entonces
+		promedioReprobados = notaReprobados / reprobados
+		Escribir "El promedio final de los estudiantes que reprobaron el curso es " promedioReprobados
+	SiNo 
+		Escribir "Ningún alumno reprobó el curso."
+	FinSi
+	
+	Si mayor75 > 0 Entonces
+		Escribir "El " porcentajeMayor75 "% de los alumnos obtuvo una nota mayor a 7.5 en el integrador."
+	SiNo 
+		Escribir "Ningún alumno obtuvo una nota mayor a 7.5 en el integrador."		
+	FinSi
+	
+	Escribir "La mayor nota obtenida en las exposiciones es " mayorNotaExp
+	
+	Escribir entre4y75 " alumnos obtuvieron en el parcial entre 4.0 y 7.5"
+	
+FinAlgoritmo

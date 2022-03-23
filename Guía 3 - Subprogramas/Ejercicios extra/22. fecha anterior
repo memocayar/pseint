@@ -1,0 +1,87 @@
+Algoritmo sin_titulo
+	Definir dia, mes, anio Como Real
+	Definir fecha Como Logico
+	fecha = Falso
+	
+	Hacer 
+		Escribir "Ingrese fecha por partes DD/MM/AAAA"
+		Escribir "Ingrese día (DD)"
+		Leer dia 
+		Escribir "Ingrese mes (MM)"
+		Leer mes 
+		Escribir "Ingrese año (AAAA)"
+		Leer anio
+		evaluar(dia,mes,anio,fecha) 
+		
+		Si fecha = falso 
+			Escribir "La fecha ingresada no es correcta. Presione una tecla para continuar."
+			Esperar Tecla
+			Limpiar Pantalla
+		FinSi
+	Mientras Que fecha = Falso
+	
+	Escribir "Fecha ingresada: " dia "/" mes "/" anio
+	diaAnterior(dia,mes,anio,fecha)
+	Escribir "Fecha anterior: " dia "/" mes "/" anio
+FinAlgoritmo
+
+SubProceso diaAnterior(dia Por Referencia,mes Por Referencia,anio Por Referencia, fecha Por Referencia)
+	Si 2 <= dia 
+		dia = dia - 1
+	SiNo 
+		Si dia = 1 
+			dia = 31 
+			Si 2 <= mes
+				mes = mes - 1
+			SiNO
+				Si mes = 1 
+					mes = 12
+					anio = anio - 1
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	evaluar(dia,mes,anio,fecha)
+	Si fecha = Falso
+		diaAnterior(dia,mes,anio,fecha)
+	FinSi
+FinSubProceso
+
+SubProceso evaluar(dia por referencia, mes Por Referencia, anio por referencia, fecha Por referencia)
+	Si dia >= 1 y dia <= 31 y mes >= 1 y mes <= 12
+		Segun mes Hacer
+			1, 3, 5, 7, 8, 10, 12: 
+				Si dia >= 1 y dia <= 31
+					fecha = Verdadero 
+				SiNo
+					fecha = Falso
+				FinSi
+				
+			2: 
+				Si dia >= 1 y dia <= 29 Entonces
+					Si dia = 29 Entonces
+						Si anio % 400 = 0 o (anio % 4 = 0 y anio % 100 <> 0) Entonces
+							fecha = Verdadero
+						SiNo
+							fecha = Falso							
+						FinSi
+					SiNo 
+						fecha = Verdadero
+					FinSi
+				SiNO 
+					fecha = Falso
+				FinSi
+				
+			4, 6, 9, 11:
+				Si dia >= 1 y dia <= 30
+					fecha = Verdadero 
+				SiNo
+					fecha = Falso
+				FinSi
+		FinSegun
+	SiNo 
+		fecha = Falso
+	FinSi
+FinSubProceso
+	

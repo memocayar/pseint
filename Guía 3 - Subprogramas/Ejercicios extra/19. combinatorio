@@ -1,0 +1,35 @@
+Algoritmo combinatorioo
+	Definir m, n Como Entero
+	Escribir "COMBINATORIO DE (m/n)"
+	Escribir "Ingrese el valor para m"
+	Leer m 
+	Hacer 
+		Escribir "Ingrese el valor para n"
+		Leer n 
+		
+		Si n<0 o n>m
+			Escribir "n debe ser mayor a 0 y menor que m"
+		FinSi
+	Mientras Que n<0 o n>m
+
+	Escribir "El número de combinaciones es " combinatorio(m,n)	
+FinAlgoritmo
+
+Funcion c <- combinatorio(m,n)
+	Definir c Como Real
+	Si n = 1 Entonces
+		c = m
+	SiNo
+		c = factorial(m) / (factorial(n) * factorial(m-n))
+	FinSi
+FinFuncion
+
+Funcion f <- factorial(n)
+	Definir f Como Entero
+	Si n = 0 o n = 1 Entonces
+		f = 1
+	SiNo
+		f = n * factorial(n-1)
+	FinSi
+FinFuncion
+	

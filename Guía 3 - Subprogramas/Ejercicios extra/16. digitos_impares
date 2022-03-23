@@ -1,0 +1,32 @@
+// Realizar una función que reciba un numero ingresado por el usuario y averigüe si el
+// número tiene todos sus dígitos impares 
+
+Algoritmo digitos_impares
+	
+	Definir n Como Real
+	Escribir "Ingrese el número a evaluar"
+	Leer n
+	
+	Si impares(n) = Verdadero
+		Escribir "Todos los digitos del número ingresado son impares."
+	SiNo
+		Escribir "No todos los digitos del número ingresado son impares."
+	FinSi
+	
+FinAlgoritmo
+
+Funcion resultado <- impares(n)
+	Definir resultado como logico 
+
+	Hacer
+		Si (n%10) % 2 = 0 Entonces
+			resultado = Falso
+		SiNo
+			resultado = Verdadero
+		FinSi
+		n = trunc(n/10)
+	Mientras Que resultado = verdadero y n>0
+
+FinFuncion
+
+// hay un error cuando pongo un número muy largo por ejemplo 555555565555 pero ni idea pq es. con numeros cortos funciona a la perfección

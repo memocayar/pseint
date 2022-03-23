@@ -1,0 +1,20 @@
+//. Continuando el ejercicio anterior, ahora se pedirá una frase o palabra y se validara si la
+//	primera letra de la frase es igual a la ultima letra de la frase. Se deberá de imprimir un
+//	mensaje por pantalla que diga "CORRECTO", en caso contrario, se deberá imprimir
+//	"INCORRECTO".
+
+Algoritmo subcadena2
+	
+	Definir respuesta como cadena
+	
+	Escribir "Ingrese frase o palabra cuya primera letra sea igual a la última"
+	Leer respuesta
+	
+	Si Subcadena(respuesta,0,0) = Subcadena(respuesta, Longitud(respuesta)-1, Longitud(respuesta)-1)
+		Escribir "CORRECTO"
+	SiNo
+		Escribir "INCORRECTO"
+	FinSi
+	
+	
+FinAlgoritmo

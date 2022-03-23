@@ -1,0 +1,28 @@
+// máximo común divisor 
+
+Algoritmo sin_titulo
+	Definir m, n Como Entero
+	Escribir "Ingrese un valor para m"
+	Leer m
+	Escribir "Ingrese un valor para n"
+	Leer n
+	
+	Escribir "El máximo común divisor de " m " y " n " es: " calcularMCD(m,n)
+	
+FinAlgoritmo
+
+Funcion MCD <- calcularMCD(m,n)
+	Definir MCD Como Entero
+
+	Si m >= n
+		Si n = 0
+			MCD = m
+		SiNo
+			MCD = calcularMCD(n, m%n)
+		FinSi
+	SiNo
+		MCD = calcularMCD(n,m)
+	FinSi
+	
+FinFuncion
+	

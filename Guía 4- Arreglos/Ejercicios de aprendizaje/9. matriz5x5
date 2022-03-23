@@ -1,0 +1,43 @@
+Algoritmo matriz5x5
+	
+	Definir matriz, i, j, num, k Como Entero
+	Definir l Como Caracter
+	Dimension matriz(5,5)
+	k = 0
+	
+	Para i = 0 hasta 4
+		Para j = 0 hasta 4
+			matriz(i,j) = Aleatorio(-100,100)
+		FinPara
+	FinPara
+	
+	Escribir "Ingrese el número que desea buscar."
+	Leer num 
+	
+	Para i = 0 hasta 4
+		Para j = 0 hasta 4
+			Si matriz(i,j) = num
+				Escribir "El número se encuentra en la posición (" i "," j ")"
+				k = 1
+			FinSi
+		FinPara
+	FinPara
+	
+	Si k = 0 
+		Escribir "El número no se encuentra en la matriz." 
+	FinSi
+	
+	Escribir "¿Desea mostrar la matriz? (s/n)"
+	Leer l 
+	Si l = "s"
+		Para i = 0 hasta 4
+			Escribir ""
+			Para j = 0 hasta 4
+				Escribir sin saltar matriz(i,j) "   "
+			FinPara
+		FinPara
+		Escribir ""
+	FinSi
+
+	
+FinAlgoritmo

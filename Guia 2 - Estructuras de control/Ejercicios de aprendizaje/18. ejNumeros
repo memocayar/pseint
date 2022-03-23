@@ -1,0 +1,40 @@
+//Escribir un programa que lea números enteros hasta teclear 0 (cero). Al finalizar el
+//programa se debe mostrar el máximo número ingresado, el mínimo, y el promedio de todos ellos.
+
+Algoritmo ejNumeros
+	
+	Definir num, numMax, numMin, suma, i, promedio Como Real
+	numMax = 0 
+	i = 1
+	
+	Escribir "Ingrese un número." 
+	Leer num 
+	numMin = num 
+	suma = num
+	
+	Hacer 
+		Escribir "Ingrese otro número. Si desea finalizar ingrese 0."
+		Leer num
+		
+		suma = suma + num 
+		
+		Si num <> 0 
+			Si num >= numMax 
+				numMax = num
+			FinSi
+			
+			Si num <= numMin
+				numMin = num 
+			FinSi
+			
+			i = i + 1
+		FinSi
+	Mientras Que num <> 0
+	
+	promedio = suma / i 
+	
+	Escribir "El máximo número ingresado es " numMax
+	Escribir "El menor número ingresado es " numMin
+	Escribir "El promedio de los " i " números ingresados es " promedio
+	
+FinAlgoritmo

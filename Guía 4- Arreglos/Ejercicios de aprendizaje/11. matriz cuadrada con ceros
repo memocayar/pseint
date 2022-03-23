@@ -1,0 +1,38 @@
+Algoritmo sin_titulo
+	
+	Definir n, matriz, i, j Como Entero
+	Definir op Como Caracter
+	
+	Escribir "a- Definir la dimensión."
+	Escribir "b- Dimension aleatoria."
+	Leer op
+	
+	Si op = 'a'
+		Escribir "Ingrese valor de la dimensión." 
+		Leer n
+	SiNo 
+		n = Aleatorio(1,10)
+		Escribir "La dimensión de la matriz fue asignada de forma aleatoria."
+	FinSi
+	
+	Dimension matriz(n,n)
+	
+	Para i = 0 Hasta n-1
+		Para j = 0 hasta n-1
+			Si i = j Entonces
+				matriz(i,j) = 0
+			SiNo
+				matriz(i,j) = Aleatorio(-100,100)
+			FinSi
+		FinPara
+	FinPara
+	
+	Para i = 0 hasta n-1
+		Escribir ""
+		Para j = 0 hasta n-1
+			Escribir sin saltar matriz(i,j) "   "
+		FinPara
+	FinPara
+	Escribir ""
+	
+FinAlgoritmo

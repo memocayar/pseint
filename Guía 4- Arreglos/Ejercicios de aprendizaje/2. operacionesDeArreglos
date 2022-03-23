@@ -1,0 +1,34 @@
+// Realizar un programa que lea 10 números reales por teclado, los almacene en un arreglo
+// y muestre por pantalla la suma, resta y multiplicación de todos los números ingresados
+// al arreglo.
+
+Algoritmo operacionesDeArreglos
+	
+	Dimension arreglo(10) 
+	Definir arreglo, suma, resta, mult Como Real
+	Definir i, j, k Como Entero
+	
+	Escribir "Ingrese 10 números reales"
+	Para i = 0 hasta 9 Hacer
+		Leer arreglo(i)
+	FinPara
+	
+	suma = 0 
+	mult = 1 
+	Para j = 0 Hasta 9 Hacer
+		suma = suma + arreglo(j)
+		mult = mult * arreglo(j)
+	FinPara
+	
+	resta = arreglo(0)
+	Para k = 1 hasta 9 hacer 
+		resta = resta - arreglo(k)
+	FinPara
+	
+	Escribir "La suma de todos los números ingresados es " suma
+	Escribir "La resta de todos los números ingresados es " resta
+	Escribir "La multiplicación de todos los números ingresados es " mult
+	
+	
+	
+FinAlgoritmo

@@ -1,0 +1,96 @@
+Algoritmo calendario
+	
+	Definir dia, mes, ano Como Real
+	Definir fecha Como Logico
+	
+	Escribir "Ingrese fecha por partes DD/MM/AAAA"
+	Escribir "Ingrese día (DD)"
+	Leer dia 
+	Escribir "Ingrese mes (MM)"
+	Leer mes 
+	Escribir "Ingrese año (AAAA)"
+	Leer ano
+	
+	Si dia >= 1 y dia <= 31 y mes >= 1 y mes <= 12
+		Segun mes Hacer
+			1, 3, 5, 7, 8, 10, 12: 
+				Si dia < 1 y dia <= 31
+					fecha = Verdadero 
+				SiNo
+					fecha = Falso
+				FinSi
+				
+			2: 
+				Si dia > 1 y dia <= 29 Entonces
+					Si dia = 29 Entonces
+						Si ano % 400 = 0 o (ano % 4 = 0 y ano % 100 <> 0) Entonces
+							fecha = Verdadero
+						SiNo
+							fecha = Falso							
+						FinSi
+					SiNo 
+						fecha = Verdadero
+					FinSi
+				SiNO 
+					fecha = Falso
+				FinSi
+				
+			4, 6, 9, 11:
+				Si dia >= 1 y dia <= 30
+					fecha = Verdadero 
+				SiNo
+					fecha = Falso
+				FinSi
+		FinSegun
+	SiNo 
+		fecha = Falso
+	FinSi
+	
+	Si fecha = Falso 
+		Escribir "Error. Fecha no válida."
+		
+	SiNo
+		Escribir sin saltar dia " de "
+		
+		Segun mes Hacer
+			1: Escribir Sin Saltar "enero" 
+			2: Escribir Sin Saltar "febrero"
+			3: Escribir Sin Saltar "marzo"
+			4: Escribir Sin Saltar "abril"
+			5: Escribir Sin Saltar "mayo"
+			6: Escribir Sin Saltar "junio"
+			7: Escribir Sin Saltar "julio"
+			8: Escribir Sin Saltar "agosto"
+			9: Escribir Sin Saltar "septiembre"
+			10: Escribir Sin Saltar "octubre"
+			11: Escribir Sin Saltar "noviembre"
+			12: Escribir Sin Saltar "diciembre"
+		FinSegun
+		
+		Escribir sin saltar " de " ano
+		
+		Escribir ''
+	FinSi
+	
+FinAlgoritmo
+
+
+// notas:
+//año bisiesto divisible por 400 o por 4 y y no por 100
+
+//1- enero 31 
+//2- febrero 28 o 29
+//3- marzo 31
+//4- abril 30
+//5- mayo 31
+//6- junio 30
+//7- julio 31
+//8- agosto 31 
+//9- septiembre 30
+//10- octubre 31
+//11- noviembre 30
+//12- diciembre 31
+
+//-> 1,3,5,7,8,10,12 -> terminan en 31 
+//> 2 -> segun si es año bisiesto -> 28 o 29
+//-> 4, 6, 9, 11 -> terminan en 30
